@@ -1,12 +1,20 @@
 package test;
 
-import domain.Exercise;
+import domain.*;
+
+import java.util.Scanner;
 
 public class TestResult {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть мінімальне число");
+        int min = scanner.nextInt();
+        System.out.println("Введіть максимальне число");
+        int max = scanner.nextInt();
+        System.out.println("Введіть кількість комірок");
+        int num = scanner.nextInt();
+        Exercise.Calculate(min, max, num);
 
-        int R=10;
-        System.out.println("Area of a circle for R="+R+"m is "+Exercise.Calculate(R)+"m"+'\u00B2');
     }
 }
